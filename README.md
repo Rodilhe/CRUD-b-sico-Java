@@ -33,7 +33,7 @@ O projeto é composto pelas seguintes classes:
    git clone https://github.com/seu_usuario/nome_do_repositorio.git
    cd nome_do_repositorio
 
-2. **Adicione as Dependências:
+2. **Adicione as Dependências**:
 
   Baixe os JARs do Mockito e JUnit e coloque-os na pasta lib do projeto.
   No IntelliJ, adicione os JARs ao seu projeto:
@@ -42,8 +42,8 @@ O projeto é composto pelas seguintes classes:
   Selecione os JARs do Mockito e JUnit.
   Executar a Aplicação:
 
-3. **Compile e execute a classe MainApp para interagir com o sistema de gerenciamento de produtos.
+3. **Compile e execute a classe MainApp para interagir com o sistema de gerenciamento de produtos.**
 
-4. **Executar os Testes:
+4. **Executar os Testes**:
 
   Execute os testes unitários da classe ProdutoServiceTest para garantir que todas as funcionalidades estão funcionando como esperado.
