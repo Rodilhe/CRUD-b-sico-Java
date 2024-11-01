@@ -1,67 +1,49 @@
-Desafio de Programação - Desenvolvedor Java 
+# Sistema de Gerenciamento de Produtos
 
-Objetivo: Avaliar suas habilidades em desenvolvimento Java com foco em design patterns, manipulação de dependências externas e escrita de testes unitários. 
+Este projeto é uma aplicação Java que implementa um sistema de gerenciamento de produtos com operações básicas de CRUD (Create, Read, Update, Delete). A aplicação utiliza o padrão de projeto Singleton para gerenciar o serviço de produtos e emprega o Mockito para testes unitários.
 
-Descrição do Desafio 
+## Tecnologias Utilizadas
 
-Implemente uma aplicação Java que simule um sistema de gerenciamento de produtos com funcionalidades básicas de CRUD (Create, Read, Update, Delete). Este sistema deve utilizar o padrão de projeto Singleton para a classe de serviço e incluir um repositório para gerenciar os dados dos produtos. 
+- **Java SE 11**
+- **Maven**
+- **JUnit 4**
+- **Mockito 3.6**
 
-Requisitos Técnicos 
+## Estrutura do Projeto
 
-Java: Utilize Java SE 11. 
+O projeto é composto pelas seguintes classes:
 
-Maven: O projeto deve estar configurado para utilizar o Maven, mas sem o uso de dependências externas no pom.xml (os JARs necessários serão adicionados manualmente). 
+1. **Produto**: Representa um produto com atributos `id`, `nome` e `preco`.
+2. **ProdutoService**: Classe de serviço que gerencia a lógica de negócios para produtos. Implementada como um Singleton.
+3. **ProdutoRepository**: Interface que define operações básicas de CRUD para produtos.
+4. **ProdutoRepositoryImpl**: Implementação da interface `ProdutoRepository`, armazenando produtos em uma lista.
+5. **ProdutoServiceTest**: Classe de testes unitários que valida a funcionalidade do `ProdutoService` utilizando Mockito.
 
-Mockito e JUnit 4: Utilize Mockito para mockar o repositório nos testes e JUnit 4 para criar e rodar os testes unitários. Certifique-se de que o Mockito está na versão 3.6, e que ambos os JARs estão adicionados ao projeto. 
+## Funcionalidades
 
-Funcionalidades 
+- **Adicionar Produto**: Permite adicionar um novo produto.
+- **Buscar Produto por ID**: Retorna um produto com base no seu ID.
+- **Atualizar Produto**: Atualiza o nome e preço de um produto existente.
+- **Deletar Produto**: Remove um produto com base no ID.
+- **Listar Produtos**: Lista todos os produtos cadastrados.
 
-Implemente as seguintes operações no sistema de gerenciamento de produtos: 
+## Configuração do Ambiente
 
-Adicionar Produto: Método para adicionar um novo produto com ID, nome e preço. 
+1. **Clone o Repositório**:
+   git clone https://github.com/seu_usuario/nome_do_repositorio.git
+   cd nome_do_repositorio
 
-Buscar Produto por ID: Método para retornar um produto com base no seu ID. 
+2. **Adicione as Dependências:
 
-Atualizar Produto: Método para atualizar o nome e preço de um produto existente. 
+  Baixe os JARs do Mockito e JUnit e coloque-os na pasta lib do projeto.
+  No IntelliJ, adicione os JARs ao seu projeto:
+  Vá para File > Project Structure > Modules > Dependencies.
+  Clique no + e selecione JARs or directories.
+  Selecione os JARs do Mockito e JUnit.
+  Executar a Aplicação:
 
-Deletar Produto: Método para remover um produto com base no ID. 
+3. **Compile e execute a classe MainApp para interagir com o sistema de gerenciamento de produtos.
 
-Listar Produtos: Método para listar todos os produtos. 
+4. **Executar os Testes:
 
-Estrutura da Aplicação 
-
-Produto: Classe que representa um produto, com id, nome, e preco como atributos. 
-
-ProdutoService: Classe de serviço responsável pelo gerenciamento dos produtos. Esta classe deve ser implementada como um Singleton e utilizar um ProdutoRepository para manipular os dados. 
-
-ProdutoRepository: Interface para operações básicas de CRUD. 
-
-ProdutoRepositoryImpl: Implementação da interface ProdutoRepository, que irá armazenar os dados dos produtos em uma estrutura de dados simples, como uma lista. 
-
-Testes Unitários 
-
-Implemente testes unitários para cada operação do ProdutoService usando JUnit 4 e Mockito. Os testes devem verificar o seguinte: 
-
-A adição de um produto chama o método salvar no repositório. 
-
-A busca por ID retorna o produto correto. 
-
-A atualização de um produto existente modifica o nome e o preço corretamente. 
-
-A tentativa de atualizar um produto inexistente não causa erros. 
-
-A exclusão de um produto chama o método deletar no repositório. 
-
-A listagem de produtos retorna todos os produtos adicionados. 
-
-Nota: Nos testes, utilize Mockito para mockar o ProdutoRepository e validar que os métodos corretos estão sendo chamados. 
-
-Dicas para Configuração no IntelliJ 
-
-Para adicionar manualmente os JARs de dependências do Mockito e JUnit, vá para File > Project Structure > Modules > Dependencies, e adicione os arquivos .jar manualmente. 
-
-Entrega 
-
-Envie o código-fonte do projeto em um repositório Git ou arquivo ZIP, com instruções de como rodar a aplicação e os testes. 
-
-Inclua um arquivo README.md explicando as decisões de implementação. 
+  Execute os testes unitários da classe ProdutoServiceTest para garantir que todas as funcionalidades estão funcionando como esperado.
